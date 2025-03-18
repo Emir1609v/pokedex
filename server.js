@@ -11,7 +11,7 @@ const port = 5000;
 app.use(express.json());
 app.use(cors());
 
-const mongoURI = "mongodb+srv://erikmeulenbergUser:xqOGwCXdJKTKqlIy@cluster0.mongodb.net/pokedex?retryWrites=true&w=majority";
+const mongoURI = 'mongodb+srv://erikmeulenberg:Jf3r9n!dWN5Qqae@cluster0.uspc7.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0';
 
 // Debug-log
 
