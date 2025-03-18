@@ -12,7 +12,6 @@ app.use(express.json());
 app.use(cors());
 
 const mongoURI = "mongodb+srv://erikmeulenbergUser:xqOGwCXdJKTKqlIy@cluster0.mongodb.net/pokedex?retryWrites=true&w=majority";
- // Haal de URI uit .env
 
 // Debug-log
 
