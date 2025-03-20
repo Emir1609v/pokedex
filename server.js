@@ -14,7 +14,11 @@ app.use(cors());
 const mongoURI = "mongodb+srv://erikmeulenbergUser:xqOGwCXdJKTKqlIy@cluster0.mongodb.net/pokedex?retryWrites=true&w=majority";
  // Haal de URI uit .env
 
+<<<<<<< Updated upstream
 // Debug-log
+=======
+const mongo_URI = "mongodb+srv://erikmeulenberg:Jf3r9n!dWN5Qqae@cluster0.uspc7.mongodb.net/pokédex?retryWrites=true&w=majority&appName=Cluster0";
+>>>>>>> Stashed changes
 
 
 // Verbinden met MongoDB
@@ -69,3 +73,4 @@ app.post("/api/pokemon", async (req, res) => {
 app.listen(port, () => {
   console.log(` Server running on http://localhost:${port}`);
 });
+2
