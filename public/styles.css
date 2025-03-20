@@ -47,14 +47,3 @@ footer {
     background: #35424a;
     color: #ffffff;
 }
-/* Additional styles for login page */
-form {
-    max-width: 300px;
-    margin: auto;
-}
-
-input {
-    margin: 10px 0;
-    padding: 10px;
-    width: 100%;
-}

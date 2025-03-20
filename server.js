@@ -15,7 +15,8 @@ app.use(express.static(path.join(__dirname, "public"))); // Serve static files
 // Debugging: Check current directory
 console.log("Current directory:", __dirname);
 
-const mongo_URI = "mongodb+srv://erikmeulenberg:Jf3r9n!dWN5Qqae@cluster0.uspc7.mongodb.net/pokédex?retryWrites=true&w=majority&appName=Cluster0";
+const mongo_URI =
+  "mongodb+srv://erikmeulenberg:Jf3r9n!dWN5Qqae@cluster0.uspc7.mongodb.net/pokédex?retryWrites=true&w=majority&appName=Cluster0";
 
 // Connect to MongoDB
 mongoose
