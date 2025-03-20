@@ -3,6 +3,12 @@ console.log("🔍 MONGO_URI:", process.env.MONGO_URI);
 const express = require("express");
 const mongoose = require("mongoose");
 const cors = require("cors");
+<<<<<<< Updated upstream
+=======
+const path = require("path");
+const bcrypt = require("bcrypt");
+const jwt = require("jsonwebtoken")
+>>>>>>> Stashed changes
 
 const app = express();
 const port = 5000;
@@ -27,6 +33,13 @@ mongoose
   .then(() => console.log(" MongoDB Connected"))
   .catch((err) => console.error(" Error connecting to MongoDB:", err));
 
+// user schema
+const userSchema = new mongoose.Schema({
+  username: {type: String, required: true, unique: true},
+  password: {type: String, required: true},
+})
+
+const User = mongoose.model("user", userSchema )
 // Pokémon Schema
 const pokemonSchema = new mongoose.Schema({
   name: String,
