@@ -4,12 +4,13 @@
   font-weight: bold;
   font-style: bold;
 }
-/* 
-body {
-  background-image: url("./photos/oakslab.jpg");
-} */
 
-h1, h2, h3 {
+body { 
+  background-image: url("./photos/130389.gif");
+
+}
+
+h1, h2, h3, pr {
   font-family: 'PokemonClassic', sans-serif;
 }
 
@@ -20,15 +21,17 @@ h1, h2, h3 {
 }
 
 #title1 {
-  margin-top: 100px;
+  margin-top: 50px;
 }
 
 #title2 {
-  margin-top: 200px;
+  margin-top: 100px;
 }
 
 
 .pokemon {
+  margin-top: 100px;
+  margin-left: -100px;
   display: flex;
   justify-content: center;
   align-items: center;   
@@ -36,6 +39,14 @@ h1, h2, h3 {
   text-align: center;  
 }      
 
+#oak{
+  height: 600px;
+  width: auto;
+  margin-left: 1050px;
+  margin-top: -340px;
+  display: inline-block;
+
+}
 .pokemon img {
   width: 200px;      
   height: 200px;     
