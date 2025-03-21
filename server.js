@@ -15,13 +15,10 @@ app.use(cors());
 app.use(express.static(path.join(__dirname, "public"))); // Serve static files
 app.use(
   cors({
-      origin: "http://localhost:5500", // Adjust based on your frontend URL
-      credentials: true,
+    origin: "http://localhost:5500", // Adjust based on your frontend URL
+    credentials: true,
   })
 );
-
-// Debugging: Check current directory
-console.log("Current directory:", __dirname);
 
 const mongo_URI = process.env.MONGO_URI;
 //"mongodb+srv://erikmeulenberg:Jf3r9n!dWN5Qqae@cluster0.uspc7.mongodb.net/pokédex?retryWrites=true&w=majority&appName=Cluster0";
@@ -114,7 +111,6 @@ app.post("/api/login", async (req, res) => {
   console.log("Attempting login for:", username);
 
   const user = await User.findOne({ username });
-  console.log("User found:", user);
 
   if (user && (await bcrypt.compare(password, user.password))) {
     const token = jwt.sign({ id: user._id }, process.env.JWT_SECRET, {
@@ -131,4 +127,3 @@ app.post("/api/login", async (req, res) => {
 app.listen(port, () => {
   console.log(`Server running on http://localhost:${port}`);
 });
-
