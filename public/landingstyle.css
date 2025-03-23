@@ -6,7 +6,7 @@
 }
 
 body { 
-  background-image: url("./photos/130389.gif");
+  background-image: url("photos/473857.jpg");
 
 }
 
@@ -29,7 +29,7 @@ h1, h2, h3, pr {
 }
 
 
-.pokemon {
+/* .pokemon {
   margin-top: 100px;
   margin-left: -100px;
   display: flex;
@@ -37,7 +37,20 @@ h1, h2, h3, pr {
   align-items: center;   
   height: 100;                
   text-align: center;  
-}      
+}       */
+
+.pokemon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px; /* Adjust spacing between GIFs */
+  flex-wrap: wrap; /* Allows them to stack on smaller screens */
+}
+
+.pokemon {
+  max-width: 100%; /* Prevents them from overflowing */
+  height: auto;
+}
 
 #oak{
   height: 600px;
@@ -58,4 +71,8 @@ h1, h2, h3, pr {
   margin-top: -60px; 
 }
 
-
+.gif {
+  width: 150px; 
+  height: auto;
+  cursor: pointer;
+}

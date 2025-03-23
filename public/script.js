@@ -73,3 +73,31 @@ document.addEventListener('DOMContentLoaded', () => {
         pokemonList.appendChild(li);
     }
 });
+
+let currentSound = null; // Store the currently playing audio
+
+document.querySelectorAll('.gif').forEach(gif => {
+    gif.addEventListener('mouseenter', () => {
+        let soundFile = gif.getAttribute('data-sound');
+        console.log("Trying to play:", soundFile);
+
+        if (soundFile) {
+            // Stop any currently playing sound before playing a new one
+            if (currentSound) {
+                currentSound.pause();
+                currentSound.currentTime = 0; // Reset audio to start
+            }
+
+            currentSound = new Audio(soundFile);
+            currentSound.play().catch(error => console.error("Audio Error:", error));
+        }
+    });
+
+    gif.addEventListener('mouseleave', () => {
+        if (currentSound) {
+            currentSound.pause();
+            currentSound.currentTime = 0; // Reset audio to start
+            currentSound = null; // Clear the reference
+        }
+    });
+});
