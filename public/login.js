@@ -27,7 +27,7 @@ document.addEventListener("DOMContentLoaded", () => {
             const data = await response.json();
             console.log("Login successful, token received:", data.token);
             localStorage.setItem("token", data.token);
-            window.location.href = "index.html";
+            window.location.href = "pokedexpersonal.html";
         } catch (error) {
             console.error("Login error:", error.message);
             errorMessage.textContent = error.message;

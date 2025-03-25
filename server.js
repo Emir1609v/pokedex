@@ -33,6 +33,7 @@ mongoose
 const userSchema = new mongoose.Schema({
   username: { type: String, required: true, unique: true },
   password: { type: String, required: true },
+  pokemons: [{type: mongoose.Schema.Types.ObjectId, ref: 'pokemon'}]
 });
 
 const User = mongoose.model("user", userSchema); // Create User model
@@ -110,13 +111,13 @@ app.post("/api/login", async (req, res) => {
   const { username, password } = req.body;
   console.log("Attempting login for:", username);
 
-  const user = await User.findOne({ username });
+  const user = await User.findOne({ username }).populatete;
 
   if (user && (await bcrypt.compare(password, user.password))) {
     const token = jwt.sign({ id: user._id }, process.env.JWT_SECRET, {
       expiresIn: "1h",
     });
-    res.json({ token });
+    res.json({ token, });
   } else {
     console.error("Invalid credentials for user:", username);
     res.status(401).send("Invalid username or password");
