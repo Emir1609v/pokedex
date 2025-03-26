@@ -43,12 +43,12 @@ h1, h2, h3, pr {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 10px; /* Adjust spacing between GIFs */
-  flex-wrap: wrap; /* Allows them to stack on smaller screens */
+  gap: 10px;
+  flex-wrap: wrap; 
 }
 
 .pokemon {
-  max-width: 100%; /* Prevents them from overflowing */
+  max-width: 100%; 
   height: auto;
 }
 
