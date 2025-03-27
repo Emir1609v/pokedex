@@ -11,17 +11,15 @@ const port = 5000;
 
 // Middleware
 app.use(express.json());
-app.use(cors());
-app.use(express.static(path.join(__dirname, "public"))); // Serve static files
 app.use(
   cors({
-    origin: "http://localhost:5500", // Adjust based on your frontend URL
+    origin: "http://localhost:5500", // Pas dit aan op basis van je frontend-URL
     credentials: true,
   })
 );
+app.use(express.static(path.join(__dirname, "public"))); // Serve static files
 
 const mongo_URI = process.env.MONGO_URI;
-//"mongodb+srv://erikmeulenberg:Jf3r9n!dWN5Qqae@cluster0.uspc7.mongodb.net/pokédex?retryWrites=true&w=majority&appName=Cluster0";
 
 // Connect to MongoDB
 mongoose
@@ -33,10 +31,10 @@ mongoose
 const userSchema = new mongoose.Schema({
   username: { type: String, required: true, unique: true },
   password: { type: String, required: true },
-  pokemons: [{type: mongoose.Schema.Types.ObjectId, ref: 'pokemon'}]
+  pokemons: [{ type: mongoose.Schema.Types.ObjectId, ref: "Pokemon" }],
 });
 
-const User = mongoose.model("user", userSchema); // Create User model
+const User = mongoose.model("Users", userSchema); // Create User model
 
 // Pokémon Schema
 const pokemonSchema = new mongoose.Schema({
@@ -53,11 +51,11 @@ const pokemonSchema = new mongoose.Schema({
   image_url: String,
 });
 
-const Pokemon = mongoose.model("Pokemon", pokemonSchema, "pokémons"); // Ensure this matches your collection name
+const Pokemon = mongoose.model("Pokemon", pokemonSchema, "pokémons"); // Zorg ervoor dat dit overeenkomt met je collectie naam
 
 // Routes
 app.get("/", (req, res) => {
-  res.sendFile(path.join(__dirname, "public", "index.html")); // Ensure this path is correct
+  res.sendFile(path.join(__dirname, "public", "index.html")); // Zorg ervoor dat dit pad correct is
 });
 
 // Pokémon API Routes
@@ -111,13 +109,13 @@ app.post("/api/login", async (req, res) => {
   const { username, password } = req.body;
   console.log("Attempting login for:", username);
 
-  const user = await User.findOne({ username }).populatete;
+  const user = await User.findOne({ username }).populate("pokemons");
 
   if (user && (await bcrypt.compare(password, user.password))) {
     const token = jwt.sign({ id: user._id }, process.env.JWT_SECRET, {
       expiresIn: "1h",
     });
-    res.json({ token, });
+    res.json({ token });
   } else {
     console.error("Invalid credentials for user:", username);
     res.status(401).send("Invalid username or password");
