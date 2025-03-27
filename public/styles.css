@@ -1,49 +1,194 @@
-/* public/styles.css */
-body {
-    font-family: Arial, sans-serif;
+/* Reset and base styles */
+* {
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
 }
 
-header {
-    background: #35424a;
-    color: #ffffff;
-    padding: 10px 0;
-    text-align: center;
+body {
+    background: #f0f2f5;
+    color: #492aba;
 }
 
-main {
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
     padding: 20px;
 }
 
-form {
-    margin-bottom: 20px;
-}
-
-input {
-    display: block;
-    margin: 10px 0;
-    padding: 10px;
-    width: 100%;
-    max-width: 400px;
-}
-
-button {
-    padding: 10px 15px;
-    background-color: #35424a;
+/* Header styles */
+.header {
+    background: #e74c3c;
     color: white;
+    padding: 1.5rem;
+    border-radius: 12px;
+    margin-bottom: 2rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.title {
+    font-size: 2.5rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.status-bar {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.status-item {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.status-light {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.green {
+    background: #2ecc71;
+}
+
+.status-value {
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+/* Form styles */
+.form-section {
+    background: white;
+    padding: 2rem;
+    border-radius: 12px;
+    margin-bottom: 2rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+.section-title {
+    font-size: 1.8rem;
+    color: #e74c3c;
+    margin-bottom: 1.5rem;
+}
+
+.pokemon-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.form-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1rem;
+}
+
+.form-grid input {
+    padding: 0.8rem;
+    border: 2px solid #ecf0f1;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+.form-grid input:focus {
+    border-color: #e74c3c;
+    outline: none;
+    box-shadow: 0 0 8px rgba(231, 76, 60, 0.2);
+}
+
+.submit-btn {
+    align-self: flex-end;
+    background: #e74c3c;
+    color: white;
+    padding: 0.8rem 2rem;
     border: none;
+    border-radius: 8px;
+    font-size: 1.1rem;
     cursor: pointer;
+    transition: all 0.3s ease;
 }
 
-button:hover {
-    background-color: #2c3e50;
+.submit-btn:hover {
+    background: #c0392b;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-footer {
-    text-align: center;
-    padding: 10px 0;
-    background: #35424a;
-    color: #ffffff;
+/* Pokemon list styles */
+.pokemon-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 1.5rem;
+}
+
+.pokemon-card {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease;
+}
+
+.pokemon-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Footer styles */
+.footer {
+    margin-top: 2rem;
+    padding: 1.5rem;
+    background: #c0392b;
+    color: white;
+    border-radius: 12px;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.system-status {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.status-dot {
+    width: 12px;
+    height: 12px;
+    background: #2ecc71;
+    border-radius: 50%;
+    animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.2); }
+    100% { transform: scale(1); }
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .header {
+        flex-direction: column;
+        gap: 1rem;
+        text-align: center;
+    }
+    
+    .form-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .submit-btn {
+        width: 100%;
+    }
 }

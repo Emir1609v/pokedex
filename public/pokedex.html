@@ -3,34 +3,62 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pokédex</title>
+    <title>Pokédex Pro</title>
     <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header>
-        <h1>Pokédex</h1>
-    </header>
-    <main>
-        <h2>Add a Pokémon</h2>
-        <form id="pokemonForm">
-            <input type="text" id="name" placeholder="Name" required>
-            <input type="text" id="type" placeholder="Type (comma separated)" required>
-            <input type="text" id="abilities" placeholder="Abilities (comma separated)" required>
-            <input type="number" id="hp" placeholder="HP" required>
-            <input type="number" id="attack" placeholder="Attack" required>
-            <input type="number" id="defense" placeholder="Defense" required>
-            <input type="number" id="speed" placeholder="Speed" required>
-            <input type="text" id="moves" placeholder="Moves (comma separated)" required>
-            <input type="text" id="image_url" placeholder="Image URL" required>
-            <button type="submit">Add Pokémon</button>
-        </form>
+    <div class="container">
+        <header class="header">
+            <h1 class="title">⚡ Pokédex Pro</h1>
+            <div class="status-bar">
+                <div class="status-item">
+                    <span class="status-label">Active</span>
+                    <div class="status-light green"></div>
+                </div>
+                <div class="status-item">
+                    <span class="status-label">HP</span>
+                    <div class="status-value">25</div>
+                </div>
+            </div>
+        </header>
 
-        <h2>Pokémon List</h2>
-        <ul id="pokemonList"></ul>
-    </main>
-    <footer>
-        <p>&copy; 2025 My Pokédex App</p>
-    </footer>
+        <main class="main-content">
+            <section class="form-section">
+                <h2 class="section-title">Add New Pokémon</h2>
+                <form id="pokemonForm" class="pokemon-form">
+                    <div class="form-grid">
+                        <input type="text" id="name" placeholder="Pokémon Name" required>
+                        <input type="text" id="type" placeholder="Type (comma separated)" required>
+                        <input type="text" id="abilities" placeholder="Abilities" required>
+                        <input type="number" id="hp" placeholder="HP" required>
+                        <input type="number" id="attack" placeholder="Attack" required>
+                        <input type="number" id="defense" placeholder="Defense" required>
+                        <input type="number" id="speed" placeholder="Speed" required>
+                        <input type="text" id="moves" placeholder="Moves (comma separated)" required>
+                        <input type="text" id="image_url" placeholder="Image URL" required>
+                    </div>
+                    <button type="submit" class="submit-btn">➕ Add Pokémon</button>
+                </form>
+            </section>
+
+            <section class="list-section">
+                <h2 class="section-title">Pokémon Registry</h2>
+                <div class="pokemon-grid" id="pokemonList"></div>
+            </section>
+        </main>
+
+        <footer class="footer">
+            <div class="footer-content">
+                <span class="version">v2.5.1</span>
+                <span class="copyright">© 2025 Pokédex Pro</span>
+                <div class="system-status">
+                    <span class="status-text">System: Online</span>
+                    <div class="status-dot"></div>
+                </div>
+            </div>
+        </footer>
+    </div>
     <script src="script.js"></script>
 </body>
 </html>
