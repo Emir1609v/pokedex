@@ -102,58 +102,58 @@ document.querySelectorAll('.gif').forEach(gif => {
     });
 });
 
-// document.querySelectorAll(".gif").forEach(img => {
-//     img.addEventListener("click", function () {
-//         let chosenPokemon = this.alt; // Get Pokémon name
-//         let imageSrc = this.src; // Get Pokémon image source
-//         let sound = new Audio(this.getAttribute("data-sound")); 
+document.querySelectorAll(".gif").forEach(img => {
+    img.addEventListener("click", function () {
+        let chosenPokemon = this.alt; // Get Pokémon name
+        let imageSrc = this.src; // Get Pokémon image source
+        let sound = new Audio(this.getAttribute("data-sound")); 
 
     
-//         let collection = document.getElementById("pokemon-collection");
+        let collection = document.getElementById("pokemon-collection");
 
         
-//         let pokemonCard = document.createElement("div");
-//         pokemonCard.classList.add("pokemon-card");
+        let pokemonCard = document.createElement("div");
+        pokemonCard.classList.add("pokemon-card");
 
         
-//         let imgElement = document.createElement("img");
-//         imgElement.src = imageSrc;
-//         imgElement.alt = chosenPokemon;
-//         imgElement.classList.add("pokemon-img");
+        let imgElement = document.createElement("img");
+        imgElement.src = imageSrc;
+        imgElement.alt = chosenPokemon;
+        imgElement.classList.add("pokemon-img");
 
         
-//         let nameElement = document.createElement("p");
-//         nameElement.innerText = chosenPokemon;
-//         nameElement.classList.add("pokemon-name");
+        let nameElement = document.createElement("p");
+        nameElement.innerText = chosenPokemon;
+        nameElement.classList.add("pokemon-name");
 
        
-//         pokemonCard.appendChild(imgElement);
-//         pokemonCard.appendChild(nameElement);
+        pokemonCard.appendChild(imgElement);
+        pokemonCard.appendChild(nameElement);
 
         
-//         collection.appendChild(pokemonCard);
+        collection.appendChild(pokemonCard);
 
         
-//         sound.play();
-//     });
-// });
+        sound.play();
+    });
+});
 
-// document.querySelectorAll(".gif").forEach(img => {
-//     img.addEventListener("click", function () {
-//         let chosenPokemon = {
-//             name: this.alt,
-//             image: this.src
-//         };
+document.querySelectorAll(".gif").forEach(img => {
+    img.addEventListener("click", function () {
+        let chosenPokemon = {
+            name: this.alt,
+            image: this.src
+        };
 
-//         // Get existing Pokédex from localStorage or create a new one
-//         let pokedex = JSON.parse(localStorage.getItem("pokedex")) || [];
-//         pokedex.push(chosenPokemon); // Add new Pokémon
-//         localStorage.setItem("pokedex", JSON.stringify(pokedex)); // Save to storage
+        // Get existing Pokédex from localStorage or create a new one
+        let pokedex = JSON.parse(localStorage.getItem("pokedex")) || [];
+        pokedex.push(chosenPokemon); // Add new Pokémon
+        localStorage.setItem("pokedex", JSON.stringify(pokedex)); // Save to storage
 
-//         // Redirect to the Pokédex page
-//         window.location.href = "pokedex.html";
-//     });
-// });
+        // Redirect to the Pokédex page
+        window.location.href = "pokedex.html";
+    });
+});
 
 
 

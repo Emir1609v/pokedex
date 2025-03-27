@@ -5,7 +5,7 @@
   font-style: bold;
 }
 
-body { 
+/* body { 
   background-image: url("photos/473857.jpg");
 
 }
@@ -29,15 +29,6 @@ h1, h2, h3, pr {
 }
 
 
-/* .pokemon {
-  margin-top: 100px;
-  margin-left: -100px;
-  display: flex;
-  justify-content: center;
-  align-items: center;   
-  height: 100;                
-  text-align: center;  
-}       */
 
 .pokemon {
   display: flex;
@@ -67,7 +58,7 @@ h1, h2, h3, pr {
   margin: 0 10px;
 }
 
-.pokemon img:nth-child(1) { /* charmander */
+.pokemon img:nth-child(1) { 
   margin-top: -60px; 
 }
 
@@ -75,4 +66,41 @@ h1, h2, h3, pr {
   width: 150px; 
   height: auto;
   cursor: pointer;
+} */
+
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  background-color: #f8f9fa;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+h1 {
+  font-size: 2em;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.pokemon-container {
+  display: flex;
+  gap: 20px;
+}
+
+.pokemon-container img {
+  width: 150px;
+  cursor: pointer;
+  transition: transform 0.2s ease-in-out;
+}
+
+.pokemon-container img:hover {
+  transform: scale(1.1);
 }

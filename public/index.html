@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -9,9 +9,7 @@
   <title>pokedex</title>
   <h1 id="title1">EVERY JOURNEY BEGINS WITH A CHOICE</h1>
   <h3 id="title2">Now, choose the Pokémon that will be your loyal companion on this incredible journey!</h3>
-  <!-- <a href="pokedex.html">
-    <button>pokedex</button>
-    </a> -->
+
 </head>
 <body>
 
@@ -33,8 +31,30 @@
 
 <script src="script.js"></script>
 
-<!-- <img id="oak" src="photos/profoak.gif"> -->
+
 
 </body>
 
+</html> -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Choose Your Pokémon</title>
+    <link rel="stylesheet" href="landingstyle.css">
+    <script>
+        function choosePokemon(pokemon) {
+            localStorage.setItem("chosenPokemon", pokemon);
+            window.location.href = "fight.html"; 
+        }
+    </script>
+</head>
+<body>
+    <h1>Choose Your Pokémon</h1>
+    <img src="./photos/Charmander-AttackAnimation-XY-3.webp" alt="Charmander" onclick="choosePokemon('Charmander')">
+    <img src="./photos/bulbasaur.gif" alt="Bulbasaur" onclick="choosePokemon('Bulbasaur')">
+    <img src="./photos/squirtle1_500.gif" alt="Squirtle" onclick="choosePokemon('Squirtle')">
+</body>
 </html>

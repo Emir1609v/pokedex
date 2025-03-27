@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Battle!</title>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const pokemon = localStorage.getItem("chosenPokemon");
+            const enemyPokemon = ["Bulbasaur", "Eevee", "Gengar"][Math.floor(Math.random() * 3)];
+
+            document.getElementById("player").innerText = `You chose: ${pokemon}`;
+            document.getElementById("enemy").innerText = `Your opponent is: ${enemyPokemon}`;
+        });
+
+        function attack() {
+            alert("You attacked! (Battle logic goes here)");
+        }
+    </script>
+</head>
+<body>
+    <h1>Battle Begins!</h1>
+    <p id="player"></p>
+    <p id="enemy"></p>
+    <button onclick="attack()">Attack</button>
+</body>
+</html>
