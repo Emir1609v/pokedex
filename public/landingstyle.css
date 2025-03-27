@@ -5,7 +5,7 @@
   font-style: bold;
 }
 
-/* body { 
+body { 
   background-image: url("photos/473857.jpg");
 
 }
@@ -66,9 +66,9 @@ h1, h2, h3, pr {
   width: 150px; 
   height: auto;
   cursor: pointer;
-} */
+}
 
-body {
+/* body {
   font-family: Arial, sans-serif;
   text-align: center;
   background-color: #f8f9fa;
@@ -103,4 +103,4 @@ h1 {
 
 .pokemon-container img:hover {
   transform: scale(1.1);
-}
+} */
