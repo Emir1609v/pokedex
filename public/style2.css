@@ -1,0 +1,26 @@
+.pokedex-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  padding: 20px;
+}
+
+.pokemon-card {
+  border: 2px solid black;
+  border-radius: 10px;
+  padding: 10px;
+  text-align: center;
+  background-color: #f8f8f8;
+  width: 150px;
+}
+
+.pokemon-img {
+  width: 100px;
+  height: 100px;
+}
+
+.pokemon-name {
+  font-weight: bold;
+  margin-top: 5px;
+}

@@ -4,12 +4,13 @@
   font-weight: bold;
   font-style: bold;
 }
-/* 
-body {
-  background-image: url("./photos/oakslab.jpg");
-} */
 
-h1, h2, h3 {
+body { 
+  background-image: url("photos/473857.jpg");
+
+}
+
+h1, h2, h3, pr {
   font-family: 'PokemonClassic', sans-serif;
 }
 
@@ -20,22 +21,36 @@ h1, h2, h3 {
 }
 
 #title1 {
-  margin-top: 100px;
+  margin-top: 50px;
 }
 
 #title2 {
-  margin-top: 200px;
+  margin-top: 100px;
 }
+
 
 
 .pokemon {
   display: flex;
   justify-content: center;
-  align-items: center;   
-  height: 100;                
-  text-align: center;  
-}      
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap; 
+}
 
+.pokemon {
+  max-width: 100%; 
+  height: auto;
+}
+
+#oak{
+  height: 600px;
+  width: auto;
+  margin-left: 1050px;
+  margin-top: -340px;
+  display: inline-block;
+
+}
 .pokemon img {
   width: 200px;      
   height: 200px;     
@@ -43,8 +58,49 @@ h1, h2, h3 {
   margin: 0 10px;
 }
 
-.pokemon img:nth-child(1) { /* charmander */
+.pokemon img:nth-child(1) { 
   margin-top: -60px; 
 }
 
+.gif {
+  width: 150px; 
+  height: auto;
+  cursor: pointer;
+}
 
+/* body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  background-color: #f8f9fa;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+h1 {
+  font-size: 2em;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.pokemon-container {
+  display: flex;
+  gap: 20px;
+}
+
+.pokemon-container img {
+  width: 150px;
+  cursor: pointer;
+  transition: transform 0.2s ease-in-out;
+}
+
+.pokemon-container img:hover {
+  transform: scale(1.1);
+} */

@@ -3,25 +3,38 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
   <link rel="stylesheet" href="landingstyle.css">
   <title>pokedex</title>
   <h1 id="title1">EVERY JOURNEY BEGINS WITH A CHOICE</h1>
+  <h3 id="title2">Now, choose the Pokémon that will be your loyal companion on this incredible journey!</h3>
+
 </head>
 <body>
 
 <div class="pokemon">
-  <img id="charmander"  src="./photos/Charmander-AttackAnimation-XY-3.webp" alt="charmander">
+
+  <img id="charmander"  src="./photos/Charmander-AttackAnimation-XY-3.webp" alt="charmander" class="gif" data-sound="./sounds/charmandersound.mp3">
   
-  <img id="squirtle" src="./photos/squirtle1_500.gif" alt="squirtle">
+  <img id="squirtle" src="./photos/squirtle1_500.gif" alt="squirtle" class="gif"  data-sound="./sounds/squirtle.mp3">
 
-  <img id="bulbasaur" src="./photos/bulbasaur.gif" alt="bulbasaur">
+  <img id="bulbasaur" src="./photos/bulbasaur.gif" alt="bulbasaur" class="gif" data-sound="./sounds/bulbasaursound.mp3">
+  <div id="notification" style="display: none;"></div>
+  <div id="chosen-pokemon" style="display: none;">
+      <h3>Your Pokémon:</h3>
+      <p id="pokemon-name"></p>
+  </div>
 </div>
-<br>
-<H2 id="title2">Now, choose the Pokémon that will be your loyal companion on this incredible journey!</H2>
 
-  <a href="pokedex.html">
-  <button>pokedex</button>
-  </a>
+
+
+<script src="script.js"></script>
+
+
+
 </body>
 
 </html>
+
+
